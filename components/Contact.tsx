@@ -6,7 +6,10 @@ import emailjs from '@emailjs/browser';
 import LoadingSpinner from './LoadingSpinner';
 
 // Initialize EmailJS
-emailjs.init("PB3kfm2axsnXNRMK5");
+const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+if (publicKey) {
+  emailjs.init(publicKey);
+}
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -22,16 +25,26 @@ const Contact = () => {
     setIsSubmitting(true);
     setSubmitStatus('idle');
     
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+
+    if (!serviceId || !templateId) {
+      console.error('EmailJS environment variables not set.');
+      setSubmitStatus('error');
+      setIsSubmitting(false);
+      return;
+    }
+    
     try {
       console.log('Sending email with data:', {
-        service_id: 'service_wbs6hlc',
-        template_id: 'template_fyp7efw',
+        service_id: serviceId,
+        template_id: templateId,
         form_data: formData
       });
 
       const response = await emailjs.send(
-        'service_wbs6hlc',
-        'template_fyp7efw',
+        serviceId,
+        templateId,
         {
           from_name: formData.name,
           from_email: formData.email,

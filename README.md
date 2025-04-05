@@ -1,6 +1,6 @@
 # Jeff Gicharu - Portfolio Website
 
-A modern, responsive portfolio website built with Next.js 14, TypeScript, and Tailwind CSS. This website showcases my professional work, skills, and experience as a Full Stack Web Developer.
+A modern, responsive portfolio website built with Next.js 15, TypeScript, and Tailwind CSS. This website showcases my professional work, skills, and experience as a Full Stack Web Developer.
 
 ## 🚀 Features
 
@@ -15,13 +15,13 @@ A modern, responsive portfolio website built with Next.js 14, TypeScript, and Ta
 
 ## 🛠️ Technologies Used
 
-- **Framework**: Next.js 14 (App Router)
+- **Framework**: Next.js 15 (App Router)
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
 - **Email Service**: EmailJS
 - **Icons**: Custom SVG icons
-- **Deployment**: [Your deployment platform]
+- **Deployment**: Vercel
 
 ## 🏗️ Project Structure
 
@@ -49,7 +49,7 @@ portfolio-website/
 
 1. **Clone the repository**
    ```bash
-   git clone [your-repo-url]
+   git clone git@github.com:jeffgicharu/portfolio-website.git
    cd portfolio-website
    ```
 
@@ -61,12 +61,7 @@ portfolio-website/
    ```
 
 3. **Set up environment variables**
-   Create a `.env.local` file in the root directory:
-   ```env
-   NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
-   NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_emailjs_service_id
-   NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
-   ```
+   Create a `.env.local` file in the root 
 
 4. **Run the development server**
    ```bash
@@ -116,7 +111,7 @@ This website can be installed as a PWA on supported devices, providing a native 
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](your-issues-url).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page]
 
 ## 📄 License
 
@@ -124,9 +119,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Jeff Gicharu - [Your Email]
-LinkedIn: [Your LinkedIn Profile]
-GitHub: [Your GitHub Profile]
+Jeff Gicharu - jkaharu2970@gmail.com
+LinkedIn: https://www.linkedin.com/in/jeff-gicharu-0924a4217
+GitHub: https://github.com/jeffgicharu/
 
 ---
 

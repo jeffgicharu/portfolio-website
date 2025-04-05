@@ -1,26 +1,35 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* You might keep these if other non-Tailwind CSS needs them, but they aren't needed for basic Tailwind dark mode */
+  /* --background: #ffffff;
+  --foreground: #171717; */
 }
 
-@theme inline {
+/* Remove @theme inline block if not specifically used elsewhere */
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* Remove the media query for dark scheme preference */
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
-body {
+/* Remove direct body styling using CSS variables */
+/* body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+} */
+
+/* Apply base styles using Tailwind's @apply if needed, or rely on body classes in layout.tsx */
+body {
+  @apply font-sans antialiased;
 }
