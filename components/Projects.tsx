@@ -59,6 +59,7 @@ const item = {
 };
 
 const Projects = () => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (

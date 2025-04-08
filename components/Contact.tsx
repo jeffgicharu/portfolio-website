@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import LoadingSpinner from './LoadingSpinner';
 
@@ -86,7 +86,7 @@ const Contact = () => {
             Get in Touch
           </h3>
           <p className="text-gray-600 dark:text-gray-300">
-            I'm always open to new opportunities and collaborations. 
+            I&apos;m always open to new opportunities and collaborations. 
             Feel free to reach out if you have a question or just want to connect.
           </p>
         </div>
@@ -215,7 +215,7 @@ const Contact = () => {
               animate={{ opacity: 1 }}
               className="text-green-600 dark:text-green-400 text-center"
             >
-              Message sent successfully! I'll get back to you soon.
+              Message sent successfully! I&apos;ll get back to you soon.
             </motion.p>
           )}
 

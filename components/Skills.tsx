@@ -76,7 +76,7 @@ const Skills = () => {
           >
             {skills
               .filter(skill => skill.category === category)
-              .map((skill, index) => (
+              .map((skill) => (
                 <motion.div
                   key={skill.name}
                   variants={item}

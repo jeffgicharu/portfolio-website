@@ -37,12 +37,13 @@ export async function GET(request: NextRequest) {
           {/* Optional: Add a subtle background pattern or texture here */}
           
           <div style={{ display: 'flex', alignItems: 'center' }}>
-            <img 
-              // @ts-ignore - arrayBuffer is valid for ImageResponse img src
-              src={profileImageData} 
-              alt="Profile" 
-              width="200" 
-              height="200" 
+            <img
+              // Use @ts-expect-error as recommended by ESLint
+              // @ts-expect-error - src accepts ArrayBuffer for ImageResponse
+              src={profileImageData}
+              alt="Profile"
+              width="200"
+              height="200"
               style={{
                 borderRadius: '50%',
                 border: '5px solid white',
@@ -79,9 +80,11 @@ export async function GET(request: NextRequest) {
         // ],
       },
     );
-  } catch (e: any) {
-    console.error(`${e.message}`);
-    return new Response(`Failed to generate the image`, {
+  } catch (e) {
+    // Type the error properly
+    const error = e instanceof Error ? e : new Error('Unknown error');
+    console.error(`${error.message}`);
+    return new Response(`Failed to generate the image: ${error.message}`, {
       status: 500,
     });
   }

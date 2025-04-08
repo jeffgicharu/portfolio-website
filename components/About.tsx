@@ -21,8 +21,8 @@ const About = () => {
           which has evolved into a professional career building robust and user-friendly applications.
         </p>
         <p className="text-lg text-gray-700 dark:text-gray-300">
-          I specialize in building responsive and performant web applications using cutting-edge technologies 
-          like React, Next.js, and TypeScript. I'm committed to writing clean, maintainable code and 
+          I specialize in building responsive and performant web applications using cutting-edge technologies
+          like React, Next.js, and TypeScript. I&apos;m committed to writing clean, maintainable code and
           following best practices in software development.
         </p>
         <div className="flex gap-4 pt-4">

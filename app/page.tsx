@@ -1,4 +1,4 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Navbar from '@/components/Navbar';
 import About from '@/components/About';
 import Skills from '@/components/Skills';
@@ -17,7 +17,7 @@ export default function Home() {
         <section id="hero" className="min-h-screen flex items-center justify-center bg-gradient-to-b from-transparent to-gray-50 dark:to-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
-              Hi, I'm <span className="text-blue-600 dark:text-blue-400">Jeff Gicharu</span>
+              Hi, I&apos;m <span className="text-blue-600 dark:text-blue-400">Jeff Gicharu</span>
             </h1>
             <p className="mt-4 text-xl sm:text-2xl text-gray-600 dark:text-gray-300">
               Full Stack Web Developer
