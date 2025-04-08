@@ -9,7 +9,8 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-export const metadata: Metadata = {
+// Define base metadata
+const baseMetadata = {
   title: "Jeff Gicharu | Full Stack Web Developer",
   description: "Full Stack Web Developer specializing in React, Next.js, and modern web technologies. View my portfolio to see my latest projects and experience.",
   keywords: [
@@ -34,32 +35,9 @@ export const metadata: Metadata = {
       index: true,
       follow: true,
       'max-video-preview': -1,
-      'max-image-preview': 'large',
+      'max-image-preview': 'large' as const,
       'max-snippet': -1,
     },
-  },
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://jeffgicharu.com',
-    siteName: 'Jeff Gicharu - Full Stack Developer Portfolio',
-    title: 'Jeff Gicharu | Full Stack Web Developer',
-    description: 'Full Stack Web Developer specializing in React, Next.js, and modern web technologies. View my portfolio to see my latest projects and experience.',
-    images: [
-      {
-        url: '/images/og-image.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'Jeff Gicharu - Full Stack Developer',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Jeff Gicharu | Full Stack Web Developer',
-    description: 'Full Stack Web Developer specializing in React, Next.js, and modern web technologies.',
-    images: ['/images/og-image.jpg'],
-    creator: '@jeffgicharu',
   },
   viewport: {
     width: 'device-width',
@@ -71,6 +49,43 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: 'https://jeffgicharu.com',
+  },
+};
+
+// Construct the dynamic OG image URL
+// Replace 'https://your-deployment-url.com' with your actual production URL
+// or handle dynamically based on environment (e.g., VERCEL_URL)
+const deploymentUrl = process.env.VERCEL_URL 
+  ? `https://${process.env.VERCEL_URL}` 
+  : 'http://localhost:3000'; // Fallback for local dev
+
+const ogImageUrl = `${deploymentUrl}/api/og`;
+
+// Export metadata object
+export const metadata: Metadata = {
+  ...baseMetadata,
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: baseMetadata.alternates?.canonical || deploymentUrl, // Use canonical or deployment URL
+    siteName: 'Jeff Gicharu - Full Stack Developer Portfolio',
+    title: baseMetadata.title,
+    description: baseMetadata.description,
+    images: [
+      {
+        url: ogImageUrl,
+        width: 1200,
+        height: 630,
+        alt: 'Jeff Gicharu - Full Stack Developer',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: baseMetadata.title,
+    description: baseMetadata.description,
+    images: [ogImageUrl], // Use the generated OG image URL for Twitter as well
+    creator: '@jeffgicharu', // Replace with your actual Twitter handle if different
   },
 };
 

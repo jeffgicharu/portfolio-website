@@ -72,22 +72,6 @@ portfolio-website/
 
 5. **Open [http://localhost:3000](http://localhost:3000)**
 
-## 📝 Configuration
-
-### EmailJS Setup
-
-1. Create an account at [EmailJS](https://www.emailjs.com/)
-2. Create a new email service
-3. Create an email template
-4. Add your EmailJS credentials to `.env.local`
-
-### Customization
-
-- Update `app/layout.tsx` with your SEO metadata
-- Modify components in the `components` directory to update content
-- Adjust theme colors in `tailwind.config.js`
-- Update images in the `public` directory
-
 ## 🌐 Deployment
 
 The site can be deployed to any platform that supports Next.js applications. Some recommended platforms:
