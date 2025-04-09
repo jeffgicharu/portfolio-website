@@ -155,6 +155,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+              maxLength={100}
               disabled={isSubmitting}
             />
           </div>
@@ -171,6 +172,7 @@ const Contact = () => {
               onChange={handleChange}
               required
               className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+              maxLength={100}
               disabled={isSubmitting}
             />
           </div>
@@ -187,6 +189,7 @@ const Contact = () => {
               required
               rows={4}
               className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+              maxLength={5000}
               disabled={isSubmitting}
             />
           </div>
