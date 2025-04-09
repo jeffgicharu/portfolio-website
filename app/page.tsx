@@ -14,7 +14,7 @@ export default function Home() {
       
       {/* Hero Section */}
       <PageTransition>
-        <section id="hero" className="flex items-center justify-center py-24 sm:py-32 lg:py-40 bg-gradient-to-b from-transparent to-gray-50 dark:to-gray-800">
+        <section id="hero" className="flex items-center justify-center py-32 sm:py-40 lg:py-48 bg-gradient-to-b from-transparent to-gray-50 dark:to-gray-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold">
               Hi, I&apos;m <span className="text-blue-600 dark:text-blue-400">Jeff Gicharu</span>
@@ -35,42 +35,52 @@ export default function Home() {
       </PageTransition>
 
       {/* About Section */}
-      <PageTransition className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PageTransition>
         <section id="about" className="py-20 bg-white dark:bg-gray-900">
-          <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
-          <About />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
+            <About />
+          </div>
         </section>
       </PageTransition>
 
       {/* Skills Section */}
-      <PageTransition className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PageTransition>
         <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
-          <h2 className="text-3xl font-bold text-center mb-12">Skills & Technologies</h2>
-          <Skills />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12">Skills & Technologies</h2>
+            <Skills />
+          </div>
         </section>
       </PageTransition>
 
       {/* Projects Section */}
-      <PageTransition className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PageTransition>
         <section id="projects" className="py-20 bg-white dark:bg-gray-900">
-          <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
-          <Projects />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12">Featured Projects</h2>
+            <Projects />
+          </div>
         </section>
       </PageTransition>
 
       {/* Experience Section */}
-      <PageTransition className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PageTransition>
         <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800">
-          <h2 className="text-3xl font-bold text-center mb-12">Professional Experience</h2>
-          <Experience />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12">Professional Experience</h2>
+            <Experience />
+          </div>
         </section>
       </PageTransition>
 
       {/* Contact Section */}
-      <PageTransition className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <PageTransition>
         <section id="contact" className="py-20 bg-white dark:bg-gray-900">
-          <h2 className="text-3xl font-bold text-center mb-12">Get In Touch</h2>
-          <Contact />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+            <Contact />
+          </div>
         </section>
       </PageTransition>
     </>
