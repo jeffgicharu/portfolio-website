@@ -75,21 +75,21 @@ const Experience = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="relative"
+      className="relative pl-4"
     >
-      {/* Timeline line */}
-      <div className="absolute left-0 md:left-1/2 transform md:-translate-x-px top-0 h-full w-0.5 bg-gray-200 dark:bg-gray-700" />
+      {/* Timeline line: Adjusted left position for small screens */}
+      <div className="absolute left-[7px] md:left-1/2 transform md:-translate-x-px top-0 h-full w-0.5 bg-gray-200 dark:bg-gray-700" />
 
       {experiences.map((exp, index) => (
         <motion.div
           key={`${exp.company}-${exp.period}`}
           variants={item}
-          className={`relative flex md:justify-between items-start mb-12 ${
+          className={`relative flex items-start mb-12 md:pl-0 md:justify-between ${
             index % 2 === 0 ? 'md:flex-row-reverse' : ''
           }`}
         >
-          {/* Content */}
-          <div className="md:w-5/12">
+          {/* Content: Ensure full width on small screens */}
+          <div className="w-full md:w-5/12">
             <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100">
                 {exp.title}
@@ -123,8 +123,8 @@ const Experience = () => {
             </div>
           </div>
 
-          {/* Timeline dot */}
-          <div className="absolute left-0 md:left-1/2 transform -translate-x-px md:-translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 dark:bg-blue-400 border-4 border-white dark:border-gray-900" />
+          {/* Timeline dot: Position centered over the line (left-[7px] - translate-x-1/2 = approx left-0 after border) */}
+          <div className="absolute left-[7px] md:left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-blue-600 dark:bg-blue-400 border-4 border-white dark:border-gray-900" />
         </motion.div>
       ))}
     </motion.div>

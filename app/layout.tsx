@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/context/ThemeContext";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const inter = Inter({
@@ -95,9 +95,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} font-sans antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100`}>
-        <ThemeProvider>
+    <html lang="en" suppressHydrationWarning className="overflow-x-hidden">
+      <body className={`${inter.variable} font-sans antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 overflow-x-hidden`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
           <main className="min-h-screen">
             {children}
           </main>
